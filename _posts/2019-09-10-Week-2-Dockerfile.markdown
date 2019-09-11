@@ -1,5 +1,5 @@
 ---
-layout: "post
+layout: "post"
 ---
 I'm starting to like Docker the more I learn about it. Knowing about Docker would've been great in my COMP424 class since we had to create a site which was fully build and automated from a single file. Back then I used bash scripts which worked but were not as effective as a Docker image can be.
 
