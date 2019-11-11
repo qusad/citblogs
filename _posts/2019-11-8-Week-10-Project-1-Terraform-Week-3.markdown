@@ -7,7 +7,8 @@ Now that I think about it. The first solution is probably the only one thats via
 
 UPDATE: I see that the project talks about Dynamic Inveotories and that has to be the solution. I was able to set up the system using the provided python and ini files. We had to add several new tags to our instances for the scripts to locate them. We were able to successfully scrape the instaces from AWS. Now there is a new problem. Ansible refuses to connect to the instances using ssh, while I can ssh into them with no problems. I have tried all the solutions to the problem without success. Here is the error message for the curious ones.
 
-```xx.xx.xx.xx | UNREACHABLE! => {
+```
+xx.xx.xx.xx | UNREACHABLE! => {
     "changed": false,
     "msg": "Failed to connect to the host via ssh: OpenSSH_7.6p1 Ubuntu-4ubuntu0.3, OpenSSL 1.0.2n  7 Dec 2017\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: Applying options for *\r\ndebug1: auto-mux: Trying existing master\r\ndebug1: Control socket \"/home/qusad/.ansible/cp/a2465777c4\" does not exist\r\ndebug2: resolving \"xx.xx.xx.xx\" port 22\r\ndebug2: ssh_connect_direct: needpriv 0\r\ndebug1: Connecting to xx.xx.xx.xx [xx.xx.xx.xx] port 22.\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: connect to address xx.xx.xx.xx port 22: Connection refused\r\nssh: connect to host xx.xx.xx.xx port 22: Connection refused\r\n",
     "unreachable": true
