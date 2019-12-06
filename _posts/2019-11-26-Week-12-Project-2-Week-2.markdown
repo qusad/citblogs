@@ -12,4 +12,13 @@ Currently I am creating an ansible playbook to install terraform, AWS-cli, Ansib
     type: rsa
 ```
 
-Next, I will probably create a single Ansible playbook to run all the necesary code from one file. This may be difficult as some code needs to be ran before terraform creation and some after. After I am finished with my tasks, I will be helping my teammates with theirs.
+There are a couple of ways of doing user input and the pause/prompt seems the most reasonable. It pauses the execution of the playbook to allow various things to happen, including user input.
+
+```
+- pause
+    prompt: "Enter a value"
+    register: user_input
+    delegate_to: localhost
+```
+
+This bit of code asks a question, registers it to a variable named 'user_input', and delegates it to the localhost. Delegation is very useful as it can be used to pass variabled to different hosts during execution. 
